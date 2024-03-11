@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--? ## Step 1: Don't Forget To LIKE SHARE & SUBSCRIBE TO THAPA TECHNCIAL YOUTUBE CHANNEL 👉 https://www.youtube.com/thapatechnical -->
+
+    <link rel="stylesheet" href="style.css" />
+    <title>js ecom website</title>
+  </head>
+  <body>
+    <header class="section-navbar">
+      <section class="top_txt">
+        <div class="head container">
+          <div class="head_txt">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+          </div>
+          <div class="sing_in_up">
+            <a href="# ">SIGN IN</a>
+            <a href="# ">SIGN UP</a>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            <img
+              src="./public/images/log.png"
+              alt="thapa eCommerce logo"
+              class="logo"
+              width="80%"
+              height="auto"
+            />
+          </a>
+        </div>
+
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">about</a>
+            </li>
+            <li class="nav-item">
+              <a href="products.html" class="nav-link">products</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="addToCart.html"
+                class="nav-link add-to-cart-button"
+                id="cartValue"
+              >
+                <i class="fa-solid fa-cart-shopping"> 0 </i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========== Start Extra Product Section ========== -->
+    <section class="section-extra-product">
+      <div class="container grid grid-three--cols">
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>new year sale</p>
+            <h3>get and extra 50% off</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img extra-laptop">
+            <img src="./images/laptop.png" alt="" />
+          </div>
+        </div>
+
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>new year sale</p>
+            <h3>40% discount on speakers</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img">
+            <img src="./images/headphoneEcom.png" alt="" />
+          </div>
+        </div>
+
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>new year sale</p>
+            <h3>get and extra 50% off</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img">
+            <img src="./images/mobiles.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== End Extra Product Section ========== -->
+
+    <!-- ========== Start policy ========== -->
+    <section class="section-policy">
+      <div class="container grid grid-four--cols">
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>worldwide shipping</p>
+            <p>order above $100</p>
+          </div>
+        </div>
+
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Easy 30 Day Returns</p>
+            <p>Back Returns in 7 Days</p>
+          </div>
+        </div>
+
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>money back guarantee</p>
+            <p>guarantee with in 30-Days</p>
+          </div>
+        </div>
+
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Easy Online Support</p>
+            <p>24/7 Any time support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== End policy ========== -->
+
+    <!-- ========== Start Our Products Section ========== -->
+
+    <section class="section-products container">
+      <div class="">
+        <h2 class="section-common--heading">Checkout Thapa Store</h2>
+      </div>
+
+      <section class="container">
+        <div id="productContainer"></div>
+      </section>
+    </section>
+
+    <!-- ========== Start Product Template Section ========== -->
+
+    <template id="productTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [card]">
+          <span class="category"></span>
+          <div class="imageContainer">
+            <img class="productImage" src="" alt="" />
+          </div>
+          <h2 class="productName"></h2>
+
+          <div class="productRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="productDescription"></p>
+
+          <div class="productPriceElement">
+            <p class="productPrice"></p>
+            <p class="productActualPrice"></p>
+          </div>
+
+          <div class="productStockElement">
+            <p class="productProperty">Total Stocks Available:</p>
+            <p class="productStock"></p>
+          </div>
+
+          <div class="productQuantityElement">
+            <p class="productProperty">Quantity(Pieces)</p>
+            <div class="stockElement">
+              <button class="cartIncrement">+</button>
+              <p class="productQuantity">1</p>
+              <button class="cartDecrement">-</button>
+            </div>
+          </div>
+
+          <button class="add-to-cart-button">
+            <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+          </button>
+        </article>
+      </div>
+    </template>
+
+    <!-- ========== End Product Template Section ========== -->
+
+    <!-- ========== End Our Products Section ========== -->
+
+    <!--* ========== Start Footer Section ========== -->
+
+    <footer class="section-footer">
+      <script src="footer.js"></script>
+    </footer>
+    <!-- Include the footer JavaScript file -->
+
+    <!--* ========== End Footer Section ========== -->
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
